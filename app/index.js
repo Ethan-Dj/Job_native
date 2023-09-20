@@ -10,11 +10,12 @@ const Home = () => {
 
     return (
         <SafeAreaView style={{flex:1, backgroundColor: COLORS.lightWhite}}>
-            <Stack.Screen
+            <Stack.Screen // stack.screen just defines the header configuration
+            // its from expo router so is not real 
                 options={{headerStyle: COLORS.lightWhite,
                 headerShadowVisible: false,
                 headerLeft: () => (
-                    <ScreenHeaderBtn iconUrl={icons.menu} dimensions="60%"/>
+                    <ScreenHeaderBtn  dimensions="60%"/>
                 ),
                 headerRight: () => (
                     <ScreenHeaderBtn iconUrl={icons.profile} dimensions="10%" />
@@ -23,7 +24,15 @@ const Home = () => {
                 }}
                 />
                 <ScrollView showsVerticalScrollIndicator={false}>
-
+                    <View style={{
+                        flex:1,
+                        padding:SIZES.medium
+                    }}
+                    >
+                        <Welcome />
+                        <Popularjobs/>
+                        <Nearbyjobs />
+                    </View>
                 </ScrollView>
         </SafeAreaView>
     )

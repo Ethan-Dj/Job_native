@@ -1,13 +1,13 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import styles from './screenheader.style'
 
-const ScreenHeaderBtn = () => {
+const ScreenHeaderBtn = ({iconURL}) => {
   return (
-    <View>
-      <Text>ScreenHeaderBtn</Text>
-    </View>
+    <TouchableOpacity>
+      <Text>Menu</Text>
+    </TouchableOpacity>
   )
 }
 
